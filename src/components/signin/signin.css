@@ -1,0 +1,65 @@
+.out-BoxSI {
+    height: 95vh;
+    width: 40vw;
+    border: 1px solid black;
+    position: relative;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-Content: flex-start;
+    align-items: center;
+}
+
+.In-Box {
+    height: 60%;
+    width: 20%;
+    border: 1px solid white
+}
+
+.Para {
+    height: 70%;
+    width: 30%;
+    border: 1px solid white;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Account {
+    height: 70%;
+    width: 40%;
+    border: 1px solid white;
+    align-items: center;
+}
+
+.Email {
+    height: 60%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.Password {
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.class {
+    height: 60%;
+    width: 90%;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.clickbuttons {
+    height: 30%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
