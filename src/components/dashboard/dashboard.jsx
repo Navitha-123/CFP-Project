@@ -19,9 +19,9 @@ function Dashboard() {
     <div>
        <Header/>
        {/* <Note2 noteHandler = {listenToNote2}/> */}
-       <div>
+       <div>\
         {
-          toggle ? <Note2/>  :  <Note1 listenToNote1 = {listenToNote1}/> 
+          toggle ? <Note2 listenToNote2 = {listenToNote2}/>  :  <Note1 listenToNote1 = {listenToNote1}/> 
          /*  toggle ? (<div> <Note2/>  :  <Note1 listenToNote1 = {listenToNote1}/> </div>) : (<div> <Note1/>:<Note2 listenToNote2={listenToNote2}/></div>) */
   
           /*   toggle ? <Note2/>  :  <Note1 listenToNote1 = {listenToNote1}/> */  /* ? toggle  ? <Note1/>:<Note2 listenToNote2={listenToNote2}/>  */
@@ -34,5 +34,4 @@ function Dashboard() {
     </div>
   )
 }
-
 export default Dashboard

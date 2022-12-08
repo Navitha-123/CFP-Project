@@ -3,6 +3,7 @@ import image from './Googleimg.png'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './signin.css'
+import { loginApi } from '../../services/userService';
 
 const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
@@ -58,6 +59,14 @@ function SigninPage() {
                passwordHelper:""
 
                }))
+        }
+        if(emailTest === true && passwordTest === true){
+            loginApi(signObj).then((response)=>{//give promises
+                localStorage.setItem("token",response.data.id)
+                console.log(response)
+            }).catch((error)=>{
+                console.log(error)
+            })
         }
     }
     

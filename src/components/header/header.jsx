@@ -9,7 +9,7 @@ import AppsOutlinedIcon from '@mui/icons-material/AppsOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 function Header() {
   return (
-    <div style={{ height: '12vh', width: '100vw', display: 'flex', border: '1px solid black', boxSizing: 'border-box', position: 'relative', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
+    <div style={{ height: '12vh', width: '100vw', display: 'flex', position: 'relative', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center' }}>
       <div style={{ height: '100%', width: '1%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', }}>
       </div>
       <MenuIcon />

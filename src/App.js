@@ -5,13 +5,17 @@ import Note1 from './components/takenote1/note1';
 import Note2 from './components/takenote2/note2';
 import Note3 from './components/takenote3/note3';
 import Dashboard from './components/dashboard/dashboard';
+import SigninPage from './components/signin/signin';
+import SignupPage from './components/signup/signup';
 
 
 function App() {
   return (
     <div className="App">
- <Dashboard/>
- 
+     
+     <SignupPage/> 
+ {/*  <Dashboard/> */}
+  
 {/*  <Header/> 
  <Note1/> 
  <Note2/>

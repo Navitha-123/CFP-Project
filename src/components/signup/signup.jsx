@@ -4,8 +4,10 @@ import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import Button from '@mui/material/Button';
 import './signup.css'
-const firstnameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/
-const lastnameRegex = /^[a-zA-Z]+ [a-zA-Z]+$/
+import { signupApi } from '../../services/userService';
+
+const firstnameRegex = /^[a-zA-Z ]{2,40}$/;
+const lastnameRegex = /^[a-zA-Z ]{2,40}$/;
 const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
 function SignupPage() {
@@ -40,6 +42,8 @@ function SignupPage() {
       password: event.target.value
     }))
 
+
+
   }
 
   const onSubmit = () => {
@@ -47,6 +51,7 @@ function SignupPage() {
     let lastnameTest = lastnameRegex.test(signupObj.lastname)
     let emailTest = emailRegex.test(signupObj.email)
     let passwordTest = passwordRegex.test(signupObj.password)
+
     if (firstnameTest === false) {
       setRegexObj1(previousState => ({
         ...previousState,
@@ -111,8 +116,16 @@ function SignupPage() {
 
       }))
     }
+      if(firstnameTest === true && lastnameTest === true && emailTest === true && passwordTest === true){
+        signupApi(signupObj).then((response)=>{
+          console.log(response)
+        }).catch(( error) => {
+          console.log( error)
+        })
+      }
+   
   }
-  console.log(signupObj, "Sign Up");
+  console.log(signupObj, "Sign Up...");
 
   return (
     <div>
@@ -124,13 +137,13 @@ function SignupPage() {
             <p>Create your Google Account</p>
           </div>
           <div className='name'>
-            <TextField label="FirstName" id="outlined-size-small" defaultValue="Small" size="small" onChange={takeFirstname}
+            <TextField label="FirstName" id="outlined-size-small" defaultValue="" size="small" onChange={takeFirstname}
               error={regexObj.firstnameBorder} helperText={regexObj.firstnameHelper} />
-            <TextField label="LastName" id="outlined-size-small" defaultValue="Small" size="small" onChange={takeLastname}
-              errory={regexObj.lastnameBorder} helperText={regexObj.lastnameHelper} />
+            <TextField label="LastName" id="outlined-size-small" defaultValue="" size="small" onChange={takeLastname}
+              error={regexObj.lastnameBorder} helperText={regexObj.lastnameHelper} />
           </div>
           <div className='email'>
-            <TextField label="Email" id="outlined-size-small" defaultValue="Small" size="small" onChange={takeEmail}
+            <TextField label="Email" id="outlined-size-small" defaultValue="" size="small" onChange={takeEmail}
               error={regexObj.emailBorder} helperText={regexObj.emailHelper} /></div>
           <div className="letter" style={{ height: '20%', width: '70%', display: 'flex', flexDirection: 'row', justifyContent: 'flex-start' }}>
             <p>you can use letters,numbers & periods</p>
@@ -139,7 +152,7 @@ function SignupPage() {
             <Button variant="text"> Use my current email address instead</Button>
           </div>
           <div className='confirmpassword'>
-            <TextField label="Password" id="outlined-size-small" defaultValue="Small" size="small" onChange={takePassword}
+            <TextField label="Password" id="outlined-size-small" defaultValue="" size="small" onChange={takePassword}
               error={regexObj.passwordBorder} helperText={regexObj.passwordHelper} />
             <TextField label="Confirm" id="outlined-size-small" size="small" />
           </div>
