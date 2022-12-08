@@ -13,10 +13,13 @@ import RedoOutlinedIcon from '@mui/icons-material/RedoOutlined';
 
 import Button from '@mui/material/Button';
 
-function Note2() {
+function Note2(props) {
+  const openNote1 = () =>{
+    props.listenToNote2()
+  }
 
   return (
-    <div style={{ height: '20vh', width: '50vw', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', border: '1px solid black' }}>
+    <div style={{ height: '20vh', width: '50vw', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', border: '1px solid black',position:'relative',left:'300px' }}>
      <div style={{ height: '70%', width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', }}>
                     <InputBase defaultValue=" Title" />
@@ -29,18 +32,18 @@ function Note2() {
 
       <div style={{ height: '30%', width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', border: '.2px solid black ' }}>
 
-        <div style={{ width: '70%',display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }} >
-          <AddAlertOutlinedIcon />
-          <PersonAddAltOutlinedIcon />
-          <PaletteOutlinedIcon />
-          <ImageOutlinedIcon />
-          <ArchiveOutlinedIcon />
-          <MoreVertOutlinedIcon />
-          <UndoOutlinedIcon />
-          <RedoOutlinedIcon />
+        <div style={{ width: '70%',display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} >
+          <AddAlertOutlinedIcon color="action"/>
+          <PersonAddAltOutlinedIcon color="action"/>
+          <PaletteOutlinedIcon color="action"/>
+          <ImageOutlinedIcon color="action"/>
+          <ArchiveOutlinedIcon color="action"/>
+          <MoreVertOutlinedIcon color="action"/>
+          <UndoOutlinedIcon color="action"/>
+          <RedoOutlinedIcon color="action"/>
         </div>
-        <div style={{ width: '30%', justifyContent: 'space-between' }}>
-          <Button variant="text">close</Button>
+        <div style={{ width: '20%', justifyContent: 'space-between' }}>
+          <Button variant="text" onClick={props.openNote1}>close</Button >
         </div>
       </div>
 

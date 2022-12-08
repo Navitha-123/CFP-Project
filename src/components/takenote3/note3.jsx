@@ -11,7 +11,7 @@ import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 
 function Note3() {
     return (
-        <div style={{ height: '18vh', width: '20vw', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', border: '1px solid black', position: 'relative' }}>
+        <div style={{ height: '18vh', width: '20vw', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', border: '1px solid black', position: 'relative',position:'relative',left:'300px' }}>
             <div style={{ height: '70%', width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', }}>
                     <InputBase defaultValue=" Title" />
@@ -24,12 +24,12 @@ function Note3() {
 
             <div style={{ height: '30%', width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'flex-end', }}>
 
-                <AddAlertOutlinedIcon />
-                <PersonAddAltOutlinedIcon />
-                <PaletteOutlinedIcon />
-                <ImageOutlinedIcon />
-                <ArchiveOutlinedIcon />
-                <MoreVertOutlinedIcon />
+                <AddAlertOutlinedIcon color="action"/>
+                <PersonAddAltOutlinedIcon color="action"/>
+                <PaletteOutlinedIcon color="action"/>
+                <ImageOutlinedIcon color="action"/>
+                <ArchiveOutlinedIcon color="action" />
+                <MoreVertOutlinedIcon color="action"/>
             </div>
         </div>
     )/* alignItems: 'flex-end' 

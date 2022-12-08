@@ -13,22 +13,23 @@ function Header() {
       <div style={{ height: '100%', width: '1%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', }}>
       </div>
       <MenuIcon />
-      <div style={{ height: '100%', width: '10%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', }}>
+      <div style={{ height: '100%', width: '10%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',color:'grey' }}>
         <img src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png" alt="image" width='30%' height='70%'></img>
-        <h3>Keep</h3>
+        <h3 >Keep</h3>
       </div>
-      <div style={{ height: '60%', width: '70%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', backgroundColor: 'grey', border: '0.px solid grey' }}>
+      <div style={{width:'10%'}}></div>
+      <div style={{ height: '65%', width: '65%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly', backgroundColor: 'grey', border: '0.px solid grey' }}>
         <SearchIcon />
         <InputBase defaultValue="SearchIcon " />
       </div>
       <div style={{ height: '100%', width: '15%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly' }}>
-        <RefreshOutlinedIcon />
-        <ViewStreamOutlinedIcon />
-        <SettingsOutlinedIcon />
+        <RefreshOutlinedIcon color="action"/>
+        <ViewStreamOutlinedIcon color="action"/>
+        <SettingsOutlinedIcon color="action"/>
       </div>
       <div style={{ height: '100%', width: '10%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly' }}>
-        <AppsOutlinedIcon />
-        <AccountCircleOutlinedIcon />
+        <AppsOutlinedIcon color="action"/>
+        <AccountCircleOutlinedIcon color="action"/>
       </div>
       {/* <div style={{height:'100%',width:'10%',dispaly:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-evenly',}}>
          <ViewStreamOutlinedIcon/> */}
