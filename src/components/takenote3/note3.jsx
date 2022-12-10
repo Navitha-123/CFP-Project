@@ -7,22 +7,25 @@ import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
+import './note3.css'
 
 
-function Note3() {
+
+function Note3(props) {
     return (
-        <div style={{ height: '18vh', width: '20vw', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', border: '1px solid black', position: 'relative',position:'relative',left:'300px' }}>
-            <div style={{ height: '70%', width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
-                <div style={{ display: 'flex', flexDirection: 'column', }}>
-                    <InputBase defaultValue=" Title" />
-                    <InputBase defaultValue="Take a note" />
+        <div className='takeNote3'  >
+            {/* <div style={{height:'10vh'}}></div> */}
+            <div className = 'n3child1'>
+                <div className = 'n3child2' >
+                    <InputBase defaultValue={props.note.title} />
+                    <InputBase defaultValue={props.note.description} />
                 </div>
                 <div>
                     <PushPinOutlinedIcon />
                 </div>
             </div>
 
-            <div style={{ height: '30%', width: '100%', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'flex-end', }}>
+            <div className = 'n3icons' >
 
                 <AddAlertOutlinedIcon color="action"/>
                 <PersonAddAltOutlinedIcon color="action"/>

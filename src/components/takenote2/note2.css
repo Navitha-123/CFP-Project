@@ -1,15 +1,18 @@
-.takeNote3 {
-    height: 18vh;
-    width: 20vw;
+.takenote2 {
+    height: 20vh;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     border: 1px solid black;
-    margin-right: 15px;
-    margin-bottom: 15px;
+    position: relative;
+    left: 300px;
+    top: 20px;
+     margin-bottom: 30px; 
+
 }
 
-.n3child1 {
+.n2child1 {
     height: 70%;
     width: 100%;
     display: flex;
@@ -17,17 +20,28 @@
     justify-content: space-between;
 }
 
-.n3child2 {
+.n2child2 {
     display: flex;
     flex-direction: column;
-
 }
 
-.n3icons {
+.n2icons {
     height: 30%;
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-end;
+}
+
+.n2icon1 {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.n2icon2 {
+    width: 20%;
+    justify-content: space-between;
 }

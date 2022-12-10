@@ -7,19 +7,23 @@ import Note3 from './components/takenote3/note3';
 import Dashboard from './components/dashboard/dashboard';
 import SigninPage from './components/signin/signin';
 import SignupPage from './components/signup/signup';
+import PrimarySearchAppBar from './components/headermui/header';
 
 
 function App() {
   return (
     <div className="App">
-     
-     <SignupPage/> 
- {/*  <Dashboard/> */}
-  
-{/*  <Header/> 
+  <Dashboard/>  
+
+ 
+   {/*  <PrimarySearchAppBar/> */}
+{/*  <Dashboard/> */
+}
+{/* <SigninPage/> */}
+{/*   <Header/> 
  <Note1/> 
  <Note2/>
- <Note3/>  */}
+ <Note3/> */}
  
   {/* <Note1/>
   <Note2/> 

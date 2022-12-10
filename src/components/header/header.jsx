@@ -31,6 +31,7 @@ function Header() {
         <AppsOutlinedIcon color="action"/>
         <AccountCircleOutlinedIcon color="action"/>
       </div>
+    
       {/* <div style={{height:'100%',width:'10%',dispaly:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-evenly',}}>
          <ViewStreamOutlinedIcon/> */}
       {/*  <div style={{ height: '100%', width: '10%', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly' }}>

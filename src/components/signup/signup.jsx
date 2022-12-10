@@ -10,23 +10,24 @@ const firstnameRegex = /^[a-zA-Z ]{2,40}$/;
 const lastnameRegex = /^[a-zA-Z ]{2,40}$/;
 const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$/;
-function SignupPage() {
-  const [signupObj, setSignupObj] = useState({ firstname: "", lastname: "", service: "advance", email: "", password: "" })
+function SignupPage() { 
+  const [signupObj, setSignupObj] = useState({ firstName: "", lastName: "", service: "advance", email: "", password: "" })
   const [regexObj, setRegexObj1] = useState({ firstnameBorder: false, firstnameHelper: "", lastnameBorder: false, lastnameHelper: "", emailBorder: false, emailHelper: "", passwordBorder: false, passwordHelper: "" })
+  
   const takeFirstname = (event) => {
-    //setSignupObj({firstname:event.target.value})
+    //setSignupObj({firstName:event.target.value})
     setSignupObj(previousState => ({
       ...previousState,
-      firstname: event.target.value
+      firstName: event.target.value
     }))
   }
   const takeLastname = (event) => {
-    //setSignupObj({lastname:event.target.value})
+    //setSignupObj({lastName:event.target.value})
     setSignupObj(previousState => ({
       ...previousState,
-      lastname: event.target.value
+      lastName: event.target.value
     }))
-  }
+  } 
   const takeEmail = (event) => {
     // setSignupObj({email:event.target.value})
     setSignupObj(previousState => ({
@@ -34,8 +35,8 @@ function SignupPage() {
       email: event.target.value
     }))
 
-  }
-  const takePassword = (event) => {
+  } 
+ const takePassword = (event) => {
     //setSignupObj({password:event.target.value})
     setSignupObj(previousState => ({
       ...previousState,
@@ -43,12 +44,12 @@ function SignupPage() {
     }))
 
 
+  } 
 
-  }
 
   const onSubmit = () => {
-    let firstnameTest = firstnameRegex.test(signupObj.firstname)
-    let lastnameTest = lastnameRegex.test(signupObj.lastname)
+    let firstnameTest = firstnameRegex.test(signupObj.firstName)
+    let lastnameTest = lastnameRegex.test(signupObj.lastName)
     let emailTest = emailRegex.test(signupObj.email)
     let passwordTest = passwordRegex.test(signupObj.password)
 
@@ -116,16 +117,16 @@ function SignupPage() {
 
       }))
     }
-      if(firstnameTest === true && lastnameTest === true && emailTest === true && passwordTest === true){
-        signupApi(signupObj).then((response)=>{
-          console.log(response)
-        }).catch(( error) => {
-          console.log( error)
-        })
-      }
+     if(firstnameTest === true && lastnameTest === true  && emailTest === true && passwordTest === true){
+      signupApi(signupObj).then((response)=>{
+        console.log(response)
+      }).catch((error)=>{
+        console.log(error)
+      })
+     } 
    
   }
-  console.log(signupObj, "Sign Up...");
+  console.log(signupObj, "SignUp...");
 
   return (
     <div>
@@ -177,6 +178,5 @@ function SignupPage() {
 
 
   )
-
 }
 export default SignupPage
